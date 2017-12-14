@@ -39,7 +39,7 @@ let retweet = function() {
 }
 
 // grab & retweet as soon as program is running...
-//retweet();
+retweet();
 
 // FAVORITE BOT====================
 
@@ -73,7 +73,7 @@ let favoriteTweet = function(){
     });
 };
 
-//favoriteTweet();
+favoriteTweet();
 
 let phraseArray = [
     "Tamara Rules",
