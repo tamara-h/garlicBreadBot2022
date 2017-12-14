@@ -19,5 +19,8 @@
   "homepage": "https://github.com/tamara-h/twtBot#readme",
   "dependencies": {
     "twit": "^2.2.9"
+  },
+  "engines": {
+    "node": "6.11.2"
   }
 }
