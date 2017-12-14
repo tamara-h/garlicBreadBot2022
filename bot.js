@@ -9,7 +9,7 @@ let Twitter = new twit(config);
 // find latest tweet according the query 'q' in params
 let retweet = function() {
     const params = {
-        q: '#garlicBread, #garlic',  // REQUIRED
+        q: '#garlicBread, #garlic, #bread, #pizza',  // REQUIRED
         result_type: 'recent',
         lang: 'en'
     };
@@ -46,7 +46,7 @@ retweet();
 // find a random tweet and 'favorite' it
 let favoriteTweet = function(){
     const params = {
-        q: '#garlicBread, #garlic',  // REQUIRED
+        q: '#garlicBread, #garlic, #bread, #pizza',  // REQUIRED
         result_type: 'recent',
         lang: 'en'
     };
@@ -93,6 +93,7 @@ let postTweet = function(){
                 // if there was an error while 'favorite'
                 if(err){
                     console.log('CANNOT POST ... error ');
+                    console.log(err);
                 }
                 else{
                     console.log('POSTED... Success!!!');
