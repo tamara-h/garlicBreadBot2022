@@ -86,8 +86,22 @@ let phraseArray = [
     "computerz"
 ];
 
-Twitter.tweet(phraseArray[ranDom(phraseArray)]);
+// create new tweet
+let postTweet = function(){
 
+            Twitter.post('statuses/update', phraseArray[ranDom(phraseArray)], function(err, response){
+                // if there was an error while 'favorite'
+                if(err){
+                    console.log('CANNOT POST ... error ');
+                }
+                else{
+                    console.log('POSTED... Success!!!');
+                }
+            });
+
+};
+
+postTweet();
 
 // function to generate a random tweet tweet
 function ranDom (arr) {
