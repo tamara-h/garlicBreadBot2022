@@ -10,7 +10,7 @@ var Twitter = new twit(config);
 // find latest tweet according the query 'q' in params
 var retweet = function() {
     var params = {
-        q: '#garlicBread, #bread',  // REQUIRED
+        q: '#pizza',  // REQUIRED
         result_type: 'recent',
         lang: 'en'
     }
@@ -49,7 +49,7 @@ retweet();
 // find a random tweet and 'favorite' it
 var favoriteTweet = function(){
     var params = {
-        q: '#garlicBread, #bread',  // REQUIRED
+        q: '#pizza',  // REQUIRED
         result_type: 'recent',
         lang: 'en'
     }
@@ -94,9 +94,9 @@ favoriteTweet();
 //
 // Twitter.tweet(phraseArray[ranDom(phraseArray)]);
 //
-//
-// // function to generate a random tweet tweet
-// function ranDom (arr) {
-//     var index = Math.floor(Math.random()*arr.length);
-//     return arr[index];
-// };
+
+// function to generate a random tweet tweet
+function ranDom (arr) {
+    var index = Math.floor(Math.random()*arr.length);
+    return arr[index];
+};
