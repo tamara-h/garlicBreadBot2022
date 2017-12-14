@@ -1,19 +1,18 @@
 // Dependencies =========================
-var
-    twit = require('twit'),
-    config = require('./config');
+let twit = require('twit');
+let config = require('./config');
 
-var Twitter = new twit(config);
+let Twitter = new twit(config);
 
 // RETWEET BOT ==========================
 
 // find latest tweet according the query 'q' in params
-var retweet = function() {
-    var params = {
-        q: '#pizza',  // REQUIRED
+let retweet = function() {
+    const params = {
+        q: '#garlicBread, #garlic',  // REQUIRED
         result_type: 'recent',
         lang: 'en'
-    }
+    };
     Twitter.get('search/tweets', params, function(err, data) {
         // if there no errors
         if (!err) {
@@ -41,27 +40,25 @@ var retweet = function() {
 
 // grab & retweet as soon as program is running...
 retweet();
-// retweet in every 50 minutes
-// setInterval(retweet, 3000000);
 
 // FAVORITE BOT====================
 
 // find a random tweet and 'favorite' it
-var favoriteTweet = function(){
-    var params = {
-        q: '#pizza',  // REQUIRED
+let favoriteTweet = function(){
+    const params = {
+        q: '#garlicBread, #garlic',  // REQUIRED
         result_type: 'recent',
         lang: 'en'
-    }
+    };
     // find the tweet
     Twitter.get('search/tweets', params, function(err,data){
 
         // find tweets
-        var tweet = data.statuses;
-        var randomTweet = ranDom(tweet);   // pick a random tweet
+        let tweet = data.statuses;
+        let randomTweet = ranDom(tweet);   // pick a random tweet
 
         // if random tweet exists
-        if(typeof randomTweet != 'undefined'){
+        if(typeof randomTweet !== 'undefined'){
             // Tell TWITTER to 'favorite'
             Twitter.post('favorites/create', {id: randomTweet.id_str}, function(err, response){
                 // if there was an error while 'favorite'
@@ -74,26 +71,23 @@ var favoriteTweet = function(){
             });
         }
     });
-}
-// grab & 'favorite' as soon as program is running...
-favoriteTweet();
-// 'favorite' a tweet in every 60 minutes
-// setInterval(favoriteTweet, 3600000);
+};
 
-//
-// let phraseArray = [
-//     "Tamara Rules",
-//     "Garlic Bread 4 lyf",
-//     "dogs ftw",
-//     "greetings",
-//     "tweet tweet move ur feet",
-//     "hi",
-//     "maths lol",
-//     "computerz"
-// ];
-//
-// Twitter.tweet(phraseArray[ranDom(phraseArray)]);
-//
+favoriteTweet();
+
+let phraseArray = [
+    "Tamara Rules",
+    "Garlic Bread 4 lyf",
+    "dogs ftw",
+    "greetings",
+    "tweet tweet move ur feet",
+    "hi",
+    "maths lol",
+    "computerz"
+];
+
+Twitter.tweet(phraseArray[ranDom(phraseArray)]);
+
 
 // function to generate a random tweet tweet
 function ranDom (arr) {
