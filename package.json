@@ -1,0 +1,23 @@
+{
+  "name": "twtbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamara-h/twtBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamara-h/twtBot/issues"
+  },
+  "homepage": "https://github.com/tamara-h/twtBot#readme",
+  "dependencies": {
+    "twit": "^2.2.9"
+  }
+}
