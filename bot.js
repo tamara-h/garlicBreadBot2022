@@ -89,7 +89,7 @@ let phraseArray = [
 // create new tweet
 let postTweet = function(){
 
-            Twitter.post('statuses/update',{status: phraseArray[ranDom(phraseArray)]} , function(err, response){
+            Twitter.post('statuses/update',{status: ranDom(phraseArray)} , function(err, response){
                 // if there was an error while 'favorite'
                 if(err){
                     console.log('CANNOT POST ... error ');
