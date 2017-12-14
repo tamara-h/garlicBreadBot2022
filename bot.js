@@ -42,7 +42,7 @@ var retweet = function() {
 // grab & retweet as soon as program is running...
 retweet();
 // retweet in every 50 minutes
-setInterval(retweet, 3000000);
+// setInterval(retweet, 3000000);
 
 // FAVORITE BOT====================
 
@@ -78,10 +78,25 @@ var favoriteTweet = function(){
 // grab & 'favorite' as soon as program is running...
 favoriteTweet();
 // 'favorite' a tweet in every 60 minutes
-setInterval(favoriteTweet, 3600000);
+// setInterval(favoriteTweet, 3600000);
 
-// function to generate a random tweet tweet
-function ranDom (arr) {
-    var index = Math.floor(Math.random()*arr.length);
-    return arr[index];
-};
+//
+// let phraseArray = [
+//     "Tamara Rules",
+//     "Garlic Bread 4 lyf",
+//     "dogs ftw",
+//     "greetings",
+//     "tweet tweet move ur feet",
+//     "hi",
+//     "maths lol",
+//     "computerz"
+// ];
+//
+// Twitter.tweet(phraseArray[ranDom(phraseArray)]);
+//
+//
+// // function to generate a random tweet tweet
+// function ranDom (arr) {
+//     var index = Math.floor(Math.random()*arr.length);
+//     return arr[index];
+// };
