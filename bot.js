@@ -2,6 +2,8 @@
 let twit = require('twit');
 let config = require('./config');
 
+let poetry = require('../twtBot/textAnalysis/index');
+
 let Twitter = new twit(config);
 
 // RETWEET BOT ==========================
@@ -46,7 +48,7 @@ let retweet = function() {
 };
 
 // grab & retweet as soon as program is running...
-retweet();
+// retweet();
 
 // FAVORITE BOT====================
 
@@ -90,23 +92,14 @@ let favoriteTweet = function(){
     });
 };
 
-favoriteTweet();
-
-let phraseArray = [
-    "Tamara Rules",
-    "Garlic Bread 4 lyf",
-    "dogs ftw",
-    "greetings",
-    "tweet tweet move ur feet",
-    "hi",
-    "maths lol",
-    "computerz"
-];
+// favoriteTweet();
 
 // create new tweet
 let postTweet = function(){
 
-            Twitter.post('statuses/update',{status: ranDom(phraseArray)} , function(err, response){
+    poetry.returnPoem()
+        .then(result => {
+            Twitter.post('statuses/update',{status: result} , function(err, response){
                 // if there was an error while 'favorite'
                 if(err){
                     console.log('CANNOT POST ... error ');
@@ -116,10 +109,12 @@ let postTweet = function(){
                     console.log('POSTED... Success!!!');
                 }
             });
-
+        });
 };
 
 postTweet();
+
+
 
 // function to generate a random tweet tweet
 function ranDom (arr) {
