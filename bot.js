@@ -2,7 +2,7 @@
 let twit = require('twit');
 let config = require('./config');
 
-let poetry = require('../twtBot/textAnalysis/index');
+let poetry = require('./textAnalysis/index');
 
 let Twitter = new twit(config);
 
