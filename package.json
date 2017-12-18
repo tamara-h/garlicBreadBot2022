@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/tamara-h/twtBot#readme",
   "dependencies": {
+    "fs": "0.0.1-security",
+    "natural": "^0.5.4",
+    "nlp": "0.0.0",
+    "poemify": "^1.1.1",
     "twit": "^2.2.9"
   },
   "engines": {
