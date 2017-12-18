@@ -1,0 +1,3 @@
+[submodule "textAnalysis"]
+	path = textAnalysis
+	url = https://github.com/tamara-h/textAnalysis.git
