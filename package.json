@@ -20,6 +20,7 @@
   "dependencies": {
     "compromise": "^11.2.1",
     "fs": "0.0.1-security",
+    "markovchain": "^1.0.2",
     "natural": "^0.5.4",
     "poemify": "^1.1.1",
     "twit": "^2.2.9"

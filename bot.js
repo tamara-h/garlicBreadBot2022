@@ -4,7 +4,7 @@ let config = require('./config');
 
 let poetry = require('./textAnalysis/index');
 
-let Twitter = new twit(config);
+// let Twitter = new twit(config);
 
 // RETWEET BOT ==========================
 
@@ -111,11 +111,15 @@ let postTweet = function(){
                     console.log('POSTED... Success!!!');
                 }
             });
+        })
+        .catch(err => {
+            console.log(err);
         });
 };
 
 postTweet();
 
+// markovChains.return();
 
 
 // function to generate a random tweet tweet
