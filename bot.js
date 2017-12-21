@@ -4,7 +4,7 @@ let config = require('./config');
 
 let poetry = require('./textAnalysis/index');
 
-// let Twitter = new twit(config);
+let Twitter = new twit(config);
 
 // RETWEET BOT ==========================
 
