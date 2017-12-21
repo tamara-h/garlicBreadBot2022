@@ -22,5 +22,6 @@
 - Validation that it is a valid sentence? 
 - Punctuation
 - Speed optimisation
+- work out why its sometimes posting more than once
 
 
